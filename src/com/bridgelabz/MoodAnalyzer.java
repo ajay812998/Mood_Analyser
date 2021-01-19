@@ -11,10 +11,14 @@ public class MoodAnalyzer {
 	}
 
 	public String analyseMood() {
+	  try {
 		if (message.contains("I am in Sad Mood")) {
 			return "SAD";
 		} else {
 			return "HAPPY";
 		}
-	}
+	} catch (NullPointerException e) {
+		return "HAPPY";
+    }
+  }
 }

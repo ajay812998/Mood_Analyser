@@ -15,10 +15,6 @@ public class MoodAnalyzerTest {
 		Assert.assertEquals("SAD", result);
 	}
 
-	private String analyseMood() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Test
 	public void givenHappyWhileAnalysisMoodShouldReturnHappy() {
@@ -26,6 +22,13 @@ public class MoodAnalyzerTest {
 		String result = moodAnalyzer.analyseMood();
 		Assert.assertEquals("HAPPY", result);
 	} 
+	
+	@Test
+	public void givenNullWhileAnalysisMoodShouldReturnHappy() {
+		MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
+		String result = moodAnalyzer.analyseMood();
+		Assert.assertEquals("HAPPY", result);
+	}
 
 }
 
